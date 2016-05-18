@@ -2,7 +2,7 @@
 extern crate libc;
 
 // warning: probably not portable
-pub type va_list = libc::c_void;
+pub type va_list = *mut libc::c_void;
 
 extern {
   pub fn double_input(input: libc::c_int) -> libc::c_int;
